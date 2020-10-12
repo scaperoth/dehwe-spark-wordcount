@@ -35,6 +35,8 @@ object MyStreamingApp {
         .load()
         .selectExpr("CAST(value AS STRING)").as[String]
 
+      sentences.printSchema
+
       /*val counts = ???
 
       val query = counts.writeStream

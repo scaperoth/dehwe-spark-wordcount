@@ -19,6 +19,7 @@ object MyBatchApp {
       import spark.implicits._
 
       val sentences = spark.read.csv("src/main/resources/sentences.txt").as[String]
+      sentences.printSchema
 
       //val counts = ???
 
