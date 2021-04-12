@@ -15,6 +15,7 @@ object MyStreamingApp {
   val jobName = "MyStreamingApp"
   // TODO: define the schema for parsing data from Kafka
 
+  val bootstrapServers = "localhost:9092"
   def main(args: Array[String]): Unit = {
     try {
 
@@ -23,9 +24,8 @@ object MyStreamingApp {
         .config("spark.sql.shuffle.partitions", "3")
         .master("local[*]")
         .getOrCreate()
-      import spark.implicits._
 
-      val bootstrapServers = args(0)
+      import spark.implicits._
 
       val sentences = spark
         .readStream

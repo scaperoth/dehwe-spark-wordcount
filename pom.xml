@@ -6,14 +6,14 @@
 
     <!-- TODO: Change this to your organization and artifactId -->
     <groupId>com.kitmenke.spark</groupId>
-    <artifactId>spark-hello-world</artifactId>
+    <artifactId>dehwe-spark-wordcount</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
         <jdk.version>1.8</jdk.version>
         <scala.compat.version>2.12</scala.compat.version>
         <scala.version>2.12.10</scala.version>
-        <spark.version>2.4.5</spark.version>
+        <spark.version>3.0.1</spark.version>
     </properties>
 
     <build>
@@ -32,7 +32,7 @@
                 <!-- Enable the scala maven plugin, see https://github.com/davidB/scala-maven-plugin for more info -->
                 <groupId>net.alchim31.maven</groupId>
                 <artifactId>scala-maven-plugin</artifactId>
-                <version>4.3.1</version>
+                <version>4.4.1</version>
                 <executions>
                     <execution>
                         <goals>
@@ -142,7 +142,7 @@
         <dependency>
             <groupId>com.holdenkarau</groupId>
             <artifactId>spark-testing-base_${scala.compat.version}</artifactId>
-            <version>${spark.version}_0.14.0</version>
+            <version>${spark.version}_1.0.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
